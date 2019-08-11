@@ -1,0 +1,60 @@
+<header>
+    <h1 class="text-center">Burgers are Tasty!</h1>
+</header>
+
+<main class="container main-container p-3 my-3">
+    <div class="row">
+        <div class="col-sm-6 added-burgers">
+            {{!-- <div id=""> --}}
+                <h2>Burgers You Can Eat</h2>
+                {{#each burgers}}
+                    {{#unless devoured}}
+                    <div class="row no-gutters mb-2">
+                        <div class="col-sm-7 px-2 desired-burgers"> {{burger_name}} </div>
+
+                        <div class="col-sm-5">
+                            <button class="btn btn-primary getting-eaten" data-id="{{id}}" data-changeDevoured="{{devoured}}">Get in my tummy!</button>
+                        </div>
+                    </div>
+                    {{/unless}}
+                {{/each}}
+
+            {{!-- </div> --}}
+        </div>
+
+        <div class="col-sm-6 eaten">
+            <h2>Burgers You Wish You Could Eat</h2>
+            {{#each burgers}}
+                {{#if devoured}}
+                <div class="row no-gutters mb-2">
+                    <div class="col-sm-7 px-2 desired-burgers"> {{burger_name}} <span class="text-muted">(All gone)</span></div>
+                </div>
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+
+    <div>
+
+        <ul id="consumed-burgers">
+
+        </ul>
+
+    </div>
+
+
+    <div>
+
+        <form  id="add-burger">
+
+            <label for="user-burger"></label>
+            <input type="text" id="user-burger" name="burger_name">
+
+            <button type="submit">Order's up!</button>
+
+            <p>Enter a desirable burger and click the button to put in your order!</p>
+        </form>
+        
+    </div>
+
+</main>

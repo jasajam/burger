@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: yellow!important; 
+}
+
+.mass-container {
+    background-image: url("../images/rustic-vegan-1567770-unsplash.jpg");
+    /* overflow: hidden;
+    filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    background-color: rgba(131, 138, 150, 0.8);
+}
+
+/* .container {
+    background-color: blueviolet;
+} */
+
+h1 {
+    color: #fff;
+    margin: 0 auto;
+}
+
+.desired-burgers {
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
